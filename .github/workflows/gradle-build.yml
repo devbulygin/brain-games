@@ -1,20 +1,17 @@
-name: Run Gradle on PRs
-on: pull_request
+# file: .github/workflows/gradle-build.yml
+name: gradle-build
+# on – определяет события, которые запускают воркфлоу
+on: push
 jobs:
-  gradle:
-  strategy:
-  matrix:
-  os: [ubuntu-latest, macos-latest, windows-latest]
-    runs-on: ${{ matrix.os }}
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-java@v2
-        with:
-  distribution: temurin
-    java-version: 11
-
-    - name: Setup Gradle
-        uses: gradle/gradle-build-action@v2
-
-    - name: Execute Gradle build
-        run: ./gradlew build
+  # build – произвольно выбранное имя задания
+  # их может быть больше одного
+  build:
+    # операционная система для работы воркфлоу
+    runs-on: ubuntu-latest
+    steps: # список шагов, которые надо выполнить
+      # экшен, выполняет какую-то задачу
+      # checkout – клонирует репозиторий
+      - uses: actions/checkout@v2
+      # run – произвольная bash-команда
+      # ./gradlew build создаст jar
+      - run: ./gradlew build
