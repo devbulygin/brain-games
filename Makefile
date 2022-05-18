@@ -1,7 +1,5 @@
 clean-run: clean-install run-dist
 
-install-build: install build
-
 run-dist:
 	./build/install/app/bin/app
 
@@ -14,6 +12,6 @@ install:
 
 
 build:
-	./gradlew clean init build
+	./gradlew clean build
 
 .PHONY: build

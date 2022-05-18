@@ -1,12 +1,8 @@
-
-name: grable-build
+name: gradle-build
 on: push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-      - uses: gradle/gradle-build-action@v2
-
       - run: make build
