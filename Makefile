@@ -14,6 +14,6 @@ install:
 
 
 build:
-	./gradlew clean build
+	./gradlew clean init build
 
 .PHONY: build
