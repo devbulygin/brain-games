@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Cli {
     // сохраняем имя
-    public static String userName;
+    private static String userName;
 
 
     public static void askName() {
