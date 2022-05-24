@@ -5,4 +5,6 @@
 
 [![example workflow](https://github.com/devbulygin/java-project-lvl1/workflows/gradle-build/badge.svg)](https://github.com/devbulygin/java-project-lvl1/actions)
 
-<a href = "https://asciinema.org/a/FyUOKG52tDjscHn5yAkuxYbrk">Asciinema cast v1</a>
+<a href = "https://asciinema.org/a/FyUOKG52tDjscHn5yAkuxYbrk">Asciinema cast Even Game</a>
+
+<a href =ad "https://asciinema.org/a/im9EYH1wV1zLhow9GigpIxJlb">Asciinema cast Calc Game</a>
