@@ -16,22 +16,23 @@ public class Even {
 
         // генерируем случайные числа
         Random r = new Random();
-        int a = r.nextInt(99) + 1;
-        int b = r.nextInt(99) + 1;
-        int c = r.nextInt(99) + 1;
+//        выводим случайные числа от 1 до 99
+        int a = r.nextInt(98) + 1;
+        int b = r.nextInt(98) + 1;
+        int c = r.nextInt(98) + 1;
 
         //выводим правила игры, случайное число и правильный ответ
         System.out.println("Answer 'yes' if number even otherwise answer 'no'");
 
 
         //первое число
-        CheckEven.game(a);
+        Engine.evenGame(a);
 
         //второе число
-        CheckEven.game(b);
+        Engine.evenGame(b);
 
         //третье число
-        CheckEven.game(c);
+        Engine.evenGame(c);
 
         System.out.println("Congratulations, " + Cli.getName());
 
