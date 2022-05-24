@@ -95,6 +95,9 @@ public class Engine {
                     System.exit(0);
                 }
                 break;
+
+            default:
+                break;
         }
 
     }

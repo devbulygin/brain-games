@@ -17,10 +17,6 @@ public class Calc {
         Engine.calcGame();
 
 //      поздравления
-        System.out.println("Congratulations, " + Cli.getName());
+    System.out.println("Congratulations, " + Cli.getName());
         }
-
-
-
-
-    }
+}

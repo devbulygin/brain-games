@@ -12,7 +12,8 @@ public class App {
         System.out.println("0 - Exit");
         System.out.println("Your choice:");
         int number = n.nextInt();
-       // if ((name instanceof int) && (name >= 0 && name <= 1)) {
+
+//      Выбирем игру - 0 выход, 1 -представляемся, 2-четное/ нечетное, 3-калькулятор
         switch (number) {
             case 0:
                 System.exit(0);
