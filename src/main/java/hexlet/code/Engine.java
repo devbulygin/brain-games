@@ -129,11 +129,11 @@ public class Engine {
 
 //        Алгоритм Евклида для нахождения НОД
     public static int euclidsAlgorithm(int a, int b) {
-        while (b != 0){
+        while (b != 0) {
             int tmp = a % b;
             a = b;
             b = tmp;
-            }
+        }
         return a;
     }
 

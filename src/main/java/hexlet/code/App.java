@@ -3,6 +3,8 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class App {
+    static final int THREE_GAME = 3;
+    static final int FOUR_GAME = 4;
     public static void main(String[] args) {
         Scanner n = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
@@ -25,10 +27,10 @@ public class App {
             case 2:
                 Even.evenNumbers();
                 break;
-            case 3:
+            case THREE_GAME:
                 Calc.calcMe();
                 break;
-            case 4:
+            case FOUR_GAME:
                 Gcd.gsdCalc();
                 break;
             default:
