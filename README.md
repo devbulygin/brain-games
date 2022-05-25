@@ -8,3 +8,5 @@
 <a href = "https://asciinema.org/a/FyUOKG52tDjscHn5yAkuxYbrk">Asciinema cast Even Game</a>
 
 <a href = "https://asciinema.org/a/im9EYH1wV1zLhow9GigpIxJlb">Asciinema cast Calc Game</a>
+
+<a href = "https://asciinema.org/a/GA6GWJAg3sJaSO4CqjoztnlB3">Asciinema cast GCD Game</a>
