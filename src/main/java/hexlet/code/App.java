@@ -9,6 +9,7 @@ public class App {
         System.out.println("1 - Greet");
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
+        System.out.println("4 - GCD");
         System.out.println("0 - Exit");
         System.out.println("Your choice:");
         int number = n.nextInt();
@@ -26,6 +27,9 @@ public class App {
                 break;
             case 3:
                 Calc.calcMe();
+                break;
+            case 4:
+                Gcd.gsdCalc();
                 break;
             default:
                 break;

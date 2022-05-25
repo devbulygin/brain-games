@@ -4,8 +4,42 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
+//    максимальное случайное число 99, (1+98)
+    static final int randomMax = 98;
 
-    // метод проверяет число на четность
+//    Проверяем заполнено-ли имя
+    public static void checkName(){
+    String name = Cli.getName();
+    if (name == null) {
+        Cli.askName();
+        }
+    }
+
+//    Сообщение на неверный ответ для целых чисел
+    public static void wrongAnswerInt(int userAnswer, int correctAnswer){
+        System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. " +
+                "Correct answer was " + "'" + correctAnswer + "'");
+        System.out.println("Let's try again, " + Cli.getName());
+        System.exit(0);
+    }
+
+//    Сообщение на неверный ответ для строк
+    public static void wrongAnswerString(String userAnswer, String correctAnswer){
+        System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. " +
+                "Correct answer was " + "'" + correctAnswer + "'");
+        System.out.println("Let's try again, " + Cli.getName());
+        System.exit(0);
+    }
+
+//    генерируем случайное число от 1 до 99
+    public static int randomNumber(){
+        Random r = new Random();
+        int randomNumber = r.nextInt(randomMax) + 1;
+        return randomNumber;
+    }
+
+
+//  Проверяем число на четность
     public static String checkNumber(int a) {
         int check = a % 2;
         if (check == 0) {
@@ -15,7 +49,7 @@ public class Engine {
         }
     }
 
-    // метод для игры четное/нечетное
+//  Проверяем четное или нечетное
     public static void evenGame(int a) {
         Scanner q = new Scanner(System.in);
         System.out.println("Question: " + a);
@@ -26,9 +60,7 @@ public class Engine {
         if (currentA.equalsIgnoreCase(answerA)) {
             System.out.println("Correct!");
         } else {
-            System.out.println("'" + answerA + "'" + " is wrong answer ;(. Correct answer was " + "'" + currentA + "'");
-            System.out.println("Let's try again, " + Cli.getName());
-            System.exit(0);
+            Engine.wrongAnswerString(answerA, currentA);
         }
     }
 
@@ -38,8 +70,8 @@ public class Engine {
         Scanner s = new Scanner(System.in);
 
 //      вводим случаные числа от 1 до 99
-        int a = r.nextInt(98) + 1;
-        int b = r.nextInt(98) + 1;
+        int a = Engine.randomNumber();
+        int b = Engine.randomNumber();
 
 
 //      переменная operator позволит случайно выбирать выражения
@@ -58,9 +90,7 @@ public class Engine {
                 if (answer1 == x) {
                     System.out.println("Correct!");
                 } else {
-                    System.out.println("'" + answer1 + "'" + " is wrong answer ;(. Correct answer was " + "'" + x + "'");
-                    System.out.println("Let's try again, " + Cli.getName());
-                    System.exit(0);
+                    Engine.wrongAnswerInt(answer1, x);
                 }
                 break;
 
@@ -74,9 +104,7 @@ public class Engine {
                 if (answer2 == y) {
                     System.out.println("Correct!");
                 } else {
-                    System.out.println("'" + answer2 + "'" + " is wrong answer ;(. Correct answer was " + "'" + y + "'");
-                    System.out.println("Let's try again, " + Cli.getName());
-                    System.exit(0);
+                    Engine.wrongAnswerInt(answer2, y);
                 }
                 break;
 
@@ -90,15 +118,48 @@ public class Engine {
                 if (answer3 == z) {
                     System.out.println("Correct!");
                 } else {
-                    System.out.println("'" + answer3 + "'" + " is wrong answer ;(. Correct answer was " + "'" + z + "'");
-                    System.out.println("Let's try again, " + Cli.getName());
-                    System.exit(0);
+                    Engine.wrongAnswerInt(answer3, z);
                 }
                 break;
 
             default:
                 break;
         }
-
     }
+
+//        Алгоритм Евклида для нахождения НОД
+        public static int euclidsAlgorithm(int a, int b) {
+            while (b != 0){
+                int tmp = a % b;
+                a = b;
+                b = tmp;
+            }
+            return a;
+        }
+
+        public static void cdgGame(){
+            Scanner q = new Scanner(System.in);
+
+//      Генерируем случайные числа
+            int a = Engine.randomNumber();
+            int b = Engine.randomNumber();
+
+            System.out.println("Find the greatest common divisor of given numbers.");
+            System.out.println("Question: " + a + " " + b);
+            System.out.println("Your answer:");
+
+//      Получаем верный ответ с помощью алгортитма Евклида
+            int correctAnswer = Engine.euclidsAlgorithm(a, b);
+
+//      Получаем ответ пользователя
+            int userAnswer = q.nextInt();
+
+//      Сравниваем верный ответ, и ответ пользователя
+            if (correctAnswer == userAnswer) {
+                System.out.println("Correct!");
+            } else {
+                Engine.wrongAnswerInt(userAnswer, correctAnswer);
+            }
+        }
+
 }
