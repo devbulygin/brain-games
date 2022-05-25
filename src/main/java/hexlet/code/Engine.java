@@ -5,36 +5,36 @@ import java.util.Scanner;
 
 public class Engine {
 //    максимальное случайное число 99, (1+98)
-    static final int randomMax = 98;
+    static final int RANDOM_MAX = 98;
 
 //    Проверяем заполнено-ли имя
-    public static void checkName(){
-    String name = Cli.getName();
-    if (name == null) {
-        Cli.askName();
+    public static void checkName() {
+        String name = Cli.getName();
+        if (name == null) {
+            Cli.askName();
         }
     }
 
 //    Сообщение на неверный ответ для целых чисел
-    public static void wrongAnswerInt(int userAnswer, int correctAnswer){
-        System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. " +
-                "Correct answer was " + "'" + correctAnswer + "'");
+    public static void wrongAnswerInt(int userAnswer, int correctAnswer) {
+        System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. "
+                + "Correct answer was " + "'" + correctAnswer + "'");
         System.out.println("Let's try again, " + Cli.getName());
         System.exit(0);
     }
 
 //    Сообщение на неверный ответ для строк
-    public static void wrongAnswerString(String userAnswer, String correctAnswer){
-        System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. " +
-                "Correct answer was " + "'" + correctAnswer + "'");
+    public static void wrongAnswerString(String userAnswer, String correctAnswer) {
+        System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. "
+                + "Correct answer was " + "'" + correctAnswer + "'");
         System.out.println("Let's try again, " + Cli.getName());
         System.exit(0);
     }
 
 //    генерируем случайное число от 1 до 99
-    public static int randomNumber(){
+    public static int randomNumber() {
         Random r = new Random();
-        int randomNumber = r.nextInt(randomMax) + 1;
+        int randomNumber = r.nextInt(RANDOM_MAX) + 1;
         return randomNumber;
     }
 
@@ -128,38 +128,38 @@ public class Engine {
     }
 
 //        Алгоритм Евклида для нахождения НОД
-        public static int euclidsAlgorithm(int a, int b) {
-            while (b != 0){
-                int tmp = a % b;
-                a = b;
-                b = tmp;
+    public static int euclidsAlgorithm(int a, int b) {
+        while (b != 0){
+            int tmp = a % b;
+            a = b;
+            b = tmp;
             }
-            return a;
-        }
+        return a;
+    }
 
-        public static void cdgGame(){
-            Scanner q = new Scanner(System.in);
+    public static void cdgGame() {
+        Scanner q = new Scanner(System.in);
 
 //      Генерируем случайные числа
-            int a = Engine.randomNumber();
-            int b = Engine.randomNumber();
+        int a = Engine.randomNumber();
+        int b = Engine.randomNumber();
 
-            System.out.println("Find the greatest common divisor of given numbers.");
-            System.out.println("Question: " + a + " " + b);
-            System.out.println("Your answer:");
+        System.out.println("Find the greatest common divisor of given numbers.");
+        System.out.println("Question: " + a + " " + b);
+        System.out.println("Your answer:");
 
 //      Получаем верный ответ с помощью алгортитма Евклида
-            int correctAnswer = Engine.euclidsAlgorithm(a, b);
+        int correctAnswer = Engine.euclidsAlgorithm(a, b);
 
 //      Получаем ответ пользователя
-            int userAnswer = q.nextInt();
+        int userAnswer = q.nextInt();
 
 //      Сравниваем верный ответ, и ответ пользователя
-            if (correctAnswer == userAnswer) {
-                System.out.println("Correct!");
-            } else {
-                Engine.wrongAnswerInt(userAnswer, correctAnswer);
-            }
+        if (correctAnswer == userAnswer) {
+            System.out.println("Correct!");
+        } else {
+            Engine.wrongAnswerInt(userAnswer, correctAnswer);
         }
+    }
 
 }
