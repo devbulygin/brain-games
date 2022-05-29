@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Random;
 
 public class Engine {
-
+//
     static final int RANDOM_MAX = 98; //максимальное случайное число 99, (1+98)
     static final int RANDOM_MAX_PROGRESSION = 12; //максимальная длинна прогрессии
     static final int RANDOM_MIN_PROGRESSION = 5; //минимальная длинна прогрессии
@@ -51,7 +51,7 @@ public class Engine {
 //    генерируем шаг прогрессии от 2 до 5
     public static int stepProgression() {
         Random r = new Random();
-        int randomNumber = r.nextInt(5-2) + 2;
+        int randomNumber = r.nextInt(RANDOM_MIN_PROGRESSION - 2) + 2;
         return randomNumber;
     }
 
