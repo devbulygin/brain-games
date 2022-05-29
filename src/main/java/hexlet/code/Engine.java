@@ -3,12 +3,12 @@ package hexlet.code;
 import java.util.Random;
 
 public class Engine {
-//
+    //
     static final int RANDOM_MAX = 98; //максимальное случайное число 99, (1+98)
     static final int RANDOM_MAX_PROGRESSION = 12; //максимальная длинна прогрессии
     static final int RANDOM_MIN_PROGRESSION = 5; //минимальная длинна прогрессии
 
-//  Проверяем заполнено-ли имя
+    //  Проверяем заполнено-ли имя
     public static void checkName() {
         String name = Cli.getName();
         if (name == null) {
@@ -16,7 +16,7 @@ public class Engine {
         }
     }
 
-//  Сообщение на неверный ответ для целых чисел
+    //  Сообщение на неверный ответ для целых чисел
     public static void wrongAnswerInt(int userAnswer, int correctAnswer) {
         System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. "
                 + "Correct answer was " + "'" + correctAnswer + "'");
@@ -24,7 +24,7 @@ public class Engine {
         System.exit(0);
     }
 
-//  Сообщение на неверный ответ для строк
+    //  Сообщение на неверный ответ для строк
     public static void wrongAnswerString(String userAnswer, String correctAnswer) {
         System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. "
                 + "Correct answer was " + "'" + correctAnswer + "'");
@@ -32,14 +32,14 @@ public class Engine {
         System.exit(0);
     }
 
-//  генерируем случайное число от 1 до 99
+    //  генерируем случайное число от 1 до 99
     public static int randomNumber() {
         Random r = new Random();
         int randomNumber = r.nextInt(RANDOM_MAX) + 1;
         return randomNumber;
     }
 
-//  генерируем число в диапазоне от 5 до 12
+    //  генерируем число в диапазоне от 5 до 12
     public static int randomProgressionLength() {
         Random r = new Random();
         int randomNumber = r.nextInt(RANDOM_MAX_PROGRESSION - RANDOM_MIN_PROGRESSION) + RANDOM_MIN_PROGRESSION;
@@ -47,15 +47,14 @@ public class Engine {
     }
 
 
-
-//    генерируем шаг прогрессии от 2 до 5
+    //    генерируем шаг прогрессии от 2 до 5
     public static int stepProgression() {
         Random r = new Random();
         int randomNumber = r.nextInt(RANDOM_MIN_PROGRESSION - 2) + 2;
         return randomNumber;
     }
 
-//  Проверяем число на четность
+    //  Проверяем число на четность
     public static String checkNumber(int a) {
         int check = a % 2;
         if (check == 0) {
@@ -66,7 +65,7 @@ public class Engine {
     }
 
 
-//        Алгоритм Евклида для нахождения НОД
+    //        Алгоритм Евклида для нахождения НОД
     public static int euclidsAlgorithm(int a, int b) {
         while (b != 0) {
             int tmp = a % b;
@@ -105,10 +104,27 @@ public class Engine {
 
     }
 
+    //    проверка числа на простоту
+    public static boolean checkPrime(int number) {
+        int temp;
+        boolean isPrime = true;
+
+        for (int i = 2; i * i <= number; i++) {
+            temp = number % i;
+
+            if (temp == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+        return isPrime;
+    }
+
 
 //  поздравления
-    public static void congratulations() {
-        System.out.println("Congratulations, " + Cli.getName());
-    }
+        public static void congratulations() {
+            System.out.println("Congratulations, " + Cli.getName());
+        }
+
 
 }

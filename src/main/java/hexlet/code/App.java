@@ -6,6 +6,7 @@ public class App {
     static final int THREE_GAME = 3;
     static final int FOUR_GAME = 4;
     static final int FIVE_GAME = 5;
+    static final int SIX_GAME = 6;
 
 
     public static void main(String[] args) {
@@ -16,6 +17,7 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
         System.out.println("Your choice:");
         int number = n.nextInt();
@@ -40,6 +42,10 @@ public class App {
             case FIVE_GAME:
                 Progression.element();  //нахождение элемента прогрессии
                 break;
+            case SIX_GAME:
+                Prime.isPrimeNumber();  //проверка на простое число
+                break;
+
             default:
                 break;
         }

@@ -12,3 +12,5 @@
 <a href = "https://asciinema.org/a/GA6GWJAg3sJaSO4CqjoztnlB3">Asciinema cast GCD Game</a>
 
 <a href = "https://asciinema.org/a/41LCnOrgoNIxhvty6SSrRweSH">Asciinema cast Progression Game</a>
+
+<a href = "https://asciinema.org/a/k3ulMgcvzfejUMdNUDJKszD6X">Asciinema cast Prime Number Game</a>

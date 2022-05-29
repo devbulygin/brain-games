@@ -142,4 +142,40 @@ public class Games {
 
         Engine.checkAnswer(userAnswer, correctAnswer);
     }
+
+
+    public static void primeNumberGame() {
+        Scanner q = new Scanner(System.in);
+        int number = Engine.randomNumber();
+
+        String correctAnswer;
+
+
+
+//        вопросы пользователю
+        System.out.println("Question: " + number);
+        System.out.println("Your answer: ");
+        String userAnswer = q.nextLine();
+
+        boolean isPrime = Engine.checkPrime(number);
+
+
+        if (isPrime == true) {
+                correctAnswer = "yes";
+        } else {
+            correctAnswer = "no";
+        }
+
+        if (userAnswer.equalsIgnoreCase(correctAnswer)) {
+            System.out.println("Correct!");
+        } else {
+            Engine.wrongAnswerString(userAnswer, correctAnswer);
+        }
+    }
+
+
+
 }
+
+
+
