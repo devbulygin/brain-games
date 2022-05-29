@@ -7,12 +7,16 @@ public class Gcd {
 //      проверяем, представился ли игрок
         Engine.checkName();
 
-//      Три раунда
-        Engine.cdgGame();
-        Engine.cdgGame();
-        Engine.cdgGame();
+
+//      Правила игры
+        System.out.println("Find the greatest common divisor of given numbers.");
+
+
+        Games.cdgGame(); // первый раунд
+        Games.cdgGame(); // второй раунд
+        Games.cdgGame(); // третий раунд
 
 //      поздравления
-        System.out.println("Congratulations, " + Cli.getName());
+        Engine.congratulations();
     }
 }

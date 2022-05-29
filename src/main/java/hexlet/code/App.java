@@ -12,26 +12,30 @@ public class App {
         System.out.println("2 - Even");
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
+        System.out.println("5 - Progression");
         System.out.println("0 - Exit");
         System.out.println("Your choice:");
         int number = n.nextInt();
 
-//      Выбирем игру - 0 выход, 1 -представляемся, 2-четное/ нечетное, 3-калькулятор
+//      Выбирем игру
         switch (number) {
             case 0:
-                System.exit(0);
+                System.exit(0); // выход
                 break;
             case 1:
-                Cli.askName();
+                Cli.askName(); // спрашиваем имя
                 break;
             case 2:
-                Even.evenNumbers();
+                Even.evenNumbers(); //четное-нечетное
                 break;
             case THREE_GAME:
-                Calc.calcMe();
+                Calc.calcMe(); // калькулятор
                 break;
             case FOUR_GAME:
-                Gcd.gsdCalc();
+                Gcd.gsdCalc();  //НОД
+                break;
+            case 5:
+                Progression.element();  //нахождение элемента прогрессии
                 break;
             default:
                 break;
