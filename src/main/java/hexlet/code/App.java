@@ -5,6 +5,9 @@ import java.util.Scanner;
 public class App {
     static final int THREE_GAME = 3;
     static final int FOUR_GAME = 4;
+    static final int FIVE_GAME = 5;
+
+
     public static void main(String[] args) {
         Scanner n = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
@@ -34,7 +37,7 @@ public class App {
             case FOUR_GAME:
                 Gcd.gsdCalc();  //НОД
                 break;
-            case 5:
+            case FIVE_GAME:
                 Progression.element();  //нахождение элемента прогрессии
                 break;
             default:

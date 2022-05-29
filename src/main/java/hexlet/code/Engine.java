@@ -1,11 +1,12 @@
 package hexlet.code;
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Engine {
-//    максимальное случайное число 99, (1+98)
-    static final int RANDOM_MAX = 98;
+
+    static final int RANDOM_MAX = 98; //максимальное случайное число 99, (1+98)
+    static final int RANDOM_MAX_PROGRESSION = 12; //максимальная длинна прогрессии
+    static final int RANDOM_MIN_PROGRESSION = 5; //минимальная длинна прогрессии
 
 //  Проверяем заполнено-ли имя
     public static void checkName() {
@@ -41,7 +42,7 @@ public class Engine {
 //  генерируем число в диапазоне от 5 до 12
     public static int randomProgressionLength() {
         Random r = new Random();
-        int randomNumber = r.nextInt(12-5) + 5;
+        int randomNumber = r.nextInt(RANDOM_MAX_PROGRESSION - RANDOM_MIN_PROGRESSION) + RANDOM_MIN_PROGRESSION;
         return randomNumber;
     }
 
