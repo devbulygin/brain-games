@@ -160,8 +160,8 @@ public class Games {
         boolean isPrime = Engine.checkPrime(number);
 
 
-        if (isPrime == true) {
-                correctAnswer = "yes";
+        if (isPrime) {
+            correctAnswer = "yes";
         } else {
             correctAnswer = "no";
         }

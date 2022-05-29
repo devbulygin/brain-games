@@ -122,9 +122,9 @@ public class Engine {
 
 
 //  поздравления
-        public static void congratulations() {
-            System.out.println("Congratulations, " + Cli.getName());
-        }
+    public static void congratulations() {
+        System.out.println("Congratulations, " + Cli.getName());
+    }
 
 
 }

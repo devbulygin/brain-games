@@ -1,7 +1,7 @@
 package hexlet.code;
 
 public class Prime {
-    public static void isPrimeNumber(){
+    public static void isPrimeNumber() {
 //        проверяем, представился ли игрок
         Engine.checkName();
 
