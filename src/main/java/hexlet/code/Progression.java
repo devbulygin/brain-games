@@ -1,7 +1,5 @@
 package hexlet.code;
 
-import java.util.Random;
-
 public class Progression {
     public static void element() {
 //      проверяем, представился ли игрок

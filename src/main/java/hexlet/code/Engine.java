@@ -49,11 +49,11 @@ public class Engine {
 
 
 //    генерируем шаг прогрессии от 2 до 5
-public static int stepProgression() {
-    Random r = new Random();
-    int randomNumber = r.nextInt(5-2) + 2;
-    return randomNumber;
-}
+    public static int stepProgression() {
+        Random r = new Random();
+        int randomNumber = r.nextInt(5-2) + 2;
+        return randomNumber;
+    }
 
 //  Проверяем число на четность
     public static String checkNumber(int a) {
@@ -87,15 +87,15 @@ public static int stepProgression() {
 
     // выводим строку со скрытым случаным элементом массива
     public static void massiveWithHideElement(int[] elements, int hideElement) {
-        for (int i = 0; i < elements.length; i++){
-            if ( i == hideElement) {
-                if (i == elements.length-1) {
+        for (int i = 0; i < elements.length; i++) {
+            if (i == hideElement) {
+                if (i == elements.length - 1) {
                     System.out.print("..");
                 } else {
                     System.out.print(".. ");
                 }
             } else {
-                if (i == elements.length-1) {           // тут дублируется код, хотел сделать отдельный метод для этого, но не понял как можно в агументы хаписать тип данных
+                if (i == elements.length - 1) {           // тут дублируется код,
                     System.out.print(elements[i]);
                 } else {
                     System.out.print(elements[i] + " ");

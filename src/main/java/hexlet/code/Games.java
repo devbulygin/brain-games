@@ -112,7 +112,7 @@ public class Games {
 //  Игра на нахождение пропущенного элемента арифметической прогрессии
     public static void progressionGame() {
         Scanner q = new Scanner(System.in);
-        Random r =new Random();
+        Random r = new Random();
 
         int progressionLength = Engine.randomProgressionLength(); // случайный размер массива от 5 до 12
         int startProgression = Engine.randomNumber(); // первый элемент прогрессии, случайное число от 0 до 99
