@@ -126,7 +126,7 @@ public class Engine {
 
 //  поздравления
     public static void congratulations() {
-        System.out.println("Congratulations, " + Cli.getName());
+        System.out.println("Congratulations, " + Cli.getName() + "!");
     }
 
 
