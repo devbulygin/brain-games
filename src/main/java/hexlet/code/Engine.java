@@ -112,7 +112,11 @@ public class Engine {
         int temp;
         boolean isPrime = true;
 
-        for (int i = 1; i * i <= number; i++) {
+        if (number == 1){
+            return isPrime = true;
+        }
+
+        for (int i = 2; i * i <= number; i++) {
             temp = number % i;
 
             if (temp == 0) {
