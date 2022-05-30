@@ -23,7 +23,7 @@ public class Engine {
     public static void wrongAnswerInt(int userAnswer, int correctAnswer) {
         System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. "
                 + "Correct answer was " + "'" + correctAnswer + "'");
-        System.out.println("Let's try again, " + Cli.getName());
+        System.out.println("Let's try again, " + Cli.getName() + "!");
         System.exit(0);
     }
 
@@ -31,7 +31,7 @@ public class Engine {
     public static void wrongAnswerString(String userAnswer, String correctAnswer) {
         System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. "
                 + "Correct answer was " + "'" + correctAnswer + "'");
-        System.out.println("Let's try again, " + Cli.getName());
+        System.out.println("Let's try again, " + Cli.getName() + "!");
         System.exit(0);
     }
 
