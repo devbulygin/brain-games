@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.gameFiles;
+
+import hexlet.code.Engine;
 
 public class Even {
     public static void evenNumbers() {
@@ -14,9 +16,9 @@ public class Even {
         System.out.println("Answer 'yes' if number even otherwise answer 'no'");
 
 
-        Games.evenGame(a); // первый раунд
-        Games.evenGame(b); // второй раунд
-        Games.evenGame(c); // третий раунд
+        Engine.evenGame(a); // первый раунд
+        Engine.evenGame(b); // второй раунд
+        Engine.evenGame(c); // третий раунд
 
 
 //        поздравления

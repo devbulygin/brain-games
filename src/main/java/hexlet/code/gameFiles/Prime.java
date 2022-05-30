@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.gameFiles;
+
+import hexlet.code.Engine;
 
 public class Prime {
     public static void isPrimeNumber() {
@@ -8,9 +10,9 @@ public class Prime {
 //        Является ли данное число простым?
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
-        Games.primeNumberGame(); // первый раунд
-        Games.primeNumberGame(); // второй раунд
-        Games.primeNumberGame(); // третий раунд
+        Engine.primeNumberGame(); // первый раунд
+        Engine.primeNumberGame(); // второй раунд
+        Engine.primeNumberGame(); // третий раунд
 
 //        поздравления
         Engine.congratulations();

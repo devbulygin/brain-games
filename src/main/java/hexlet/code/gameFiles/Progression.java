@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.gameFiles;
+
+import hexlet.code.Engine;
 
 public class Progression {
     public static void element() {
@@ -8,9 +10,9 @@ public class Progression {
 //      Спрашиваем какой элемент пропущен
         System.out.println("What number is missing in the progression?");
 
-        Games.progressionGame(); // первый раунд
-        Games.progressionGame(); // второй раунд
-        Games.progressionGame(); // третий раунд
+        Engine.progressionGame(); // первый раунд
+        Engine.progressionGame(); // второй раунд
+        Engine.progressionGame(); // третий раунд
 
 //      поздравления
         Engine.congratulations();

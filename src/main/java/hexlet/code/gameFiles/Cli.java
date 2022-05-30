@@ -1,4 +1,4 @@
-package hexlet.code;
+package hexlet.code.gameFiles;
 
 import java.util.Scanner;
 
@@ -12,7 +12,7 @@ public class Cli {
         System.out.println("Welcome to the Brain Games!");
         System.out.println("May I have your name?");
         userName = s.nextLine();
-        System.out.println("Hello, " + userName);
+        System.out.println("Hello, " + userName + "!");
     }
 
     // делаем метод для того чтобы использовать имя в других классах

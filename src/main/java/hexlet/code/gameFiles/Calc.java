@@ -1,4 +1,6 @@
-package hexlet.code;
+package hexlet.code.gameFiles;
+
+import hexlet.code.Engine;
 
 public class Calc {
 
@@ -10,9 +12,9 @@ public class Calc {
 //      Каков результат выражения?
         System.out.println("What is the result of the expression?");
 
-        Games.calcGame(); // первый раунд
-        Games.calcGame(); // второй раунд
-        Games.calcGame(); // третий раунд
+        Engine.calcGame(); // первый раунд
+        Engine.calcGame(); // второй раунд
+        Engine.calcGame(); // третий раунд
 
 //      поздравления
         Engine.congratulations();
