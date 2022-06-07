@@ -10,8 +10,7 @@ public class Cli {
         String userName = s.nextLine();
         System.out.println("Hello, " + userName + "!");
     }
-
-    }
+}
 
 
 

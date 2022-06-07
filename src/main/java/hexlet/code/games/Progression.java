@@ -6,16 +6,17 @@ import hexlet.code.Utils;
 import java.util.Random;
 
 public class Progression {
+    static final int NUMBER_OF_ROUNDS = 3; // Количество раундов в игре
     public static void play() {
         Random r = new Random();
 
 //      Спрашиваем какой элемент пропущен
         String description = "What number is missing in the progression?";
 
-        String[] questions = new String[3]; // массив с вопросами
-        String[] currentAnswers = new String[3]; // массив с верными ответами String
+        String[] questions = new String[NUMBER_OF_ROUNDS]; // массив с вопросами
+        String[] currentAnswers = new String[NUMBER_OF_ROUNDS]; // массив с верными ответами String
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
             int progressionLength = Utils.randomProgressionLength(); // случайный размер массива от 5 до 12
             int startProgression = Utils.randomNumber(); // первый элемент прогрессии, случайное число от 0 до 99
             int stepProgression = Utils.stepProgression(); // шаг между элементами прогрессии, случайное число от 2 до 5

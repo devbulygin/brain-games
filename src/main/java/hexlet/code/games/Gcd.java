@@ -7,17 +7,17 @@ import hexlet.code.Utils;
 import java.util.Scanner;
 
 public class Gcd {
+    static final int NUMBER_OF_ROUNDS = 3; // Количество раундов в игре
     public static void play() {
-
 //      Правила игры
         String description = "Find the greatest common divisor of given numbers.";
         Scanner q = new Scanner(System.in);
 
-        String[] questions = new String[3]; // массив с вопросами
-        int[] currentAnswersInt = new int[3]; // массив с верными овтетам int
-        String[] currentAnswers = new String[3]; // массив с верными ответами String
+        String[] questions = new String[NUMBER_OF_ROUNDS]; // массив с вопросами
+        int[] currentAnswersInt = new int[NUMBER_OF_ROUNDS]; // массив с верными овтетам int
+        String[] currentAnswers = new String[NUMBER_OF_ROUNDS]; // массив с верными ответами String
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
 //      Генерируем случайные числа
             int a = Utils.randomNumber();
             int b = Utils.randomNumber();

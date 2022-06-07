@@ -1,9 +1,9 @@
 package hexlet.code;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
+    static final int NUMBER_OF_ROUNDS = 3; // Количество раундов в игре
 
 
     public static void run(String description, String[] questions, String[] currentAnswers) {
@@ -17,7 +17,7 @@ public class Engine {
         System.out.println(description);
 
 //        вопрос из игры
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
 
             System.out.println("Question: " + questions[i]);
             System.out.println("Your answer: ");
