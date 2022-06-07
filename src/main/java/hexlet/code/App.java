@@ -1,11 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.gameFiles.Cli;
-import hexlet.code.gameFiles.Even;
-import hexlet.code.gameFiles.Calc;
-import hexlet.code.gameFiles.Gcd;
-import hexlet.code.gameFiles.Progression;
-import hexlet.code.gameFiles.Prime;
+import hexlet.code.games.*;
+//import hexlet.code.games.Calc;
+//import hexlet.code.games.Gcd;
+//import hexlet.code.games.Progression;
+//import hexlet.code.games.Prime;
 
 import java.util.Scanner;
 
@@ -38,25 +37,24 @@ public class App {
                 Cli.askName(); // спрашиваем имя
                 break;
             case 2:
-                Even.evenNumbers(); //четное-нечетное
+                Even.play(); //четное-нечетное
                 break;
             case THREE_GAME:
-                Calc.calcMe(); // калькулятор
+                Calc.play(); // калькулятор
                 break;
             case FOUR_GAME:
-                Gcd.gsdCalc();  //НОД
+                Gcd.play();  //НОД
                 break;
             case FIVE_GAME:
-                Progression.element();  //нахождение элемента прогрессии
+                Progression.play();  //нахождение элемента прогрессии
                 break;
             case SIX_GAME:
-                Prime.isPrimeNumber();  //проверка на простое число
+                Prime.play();  //проверка на простое число
                 break;
 
             default:
+                System.out.println("Game number " + "'" + number + "'" + " not found, " + "try again");
                 break;
         }
-    //    }
-
     }
 }
