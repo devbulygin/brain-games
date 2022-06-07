@@ -26,7 +26,7 @@ public class Gcd {
             questions[i] = String.valueOf(a) + " " + String.valueOf(b);
             currentAnswersInt[i] = Utils.euclidsAlgorithm(a, b);
             currentAnswers[i] = String.valueOf(currentAnswersInt[i]);
-            }
+        }
         Engine.run(description, questions, currentAnswers);
     }
 }

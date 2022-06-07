@@ -59,9 +59,9 @@ public class Utils {
         boolean isPrime = true;
         String currentAnswers = "";
 
-        if (number == 1) { // Если рандомное число 1, то сразу сразу возвращаем да
-            return currentAnswers = "yes";
-        }
+//        if (number == 1) { // Если рандомное число 1, то сразу сразу возвращаем да
+//            return currentAnswers = "yes";
+//        }
 
         for (int i = 2; i * i <= number; i++) {
             temp = number % i;

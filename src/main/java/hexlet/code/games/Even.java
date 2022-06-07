@@ -27,7 +27,7 @@ public class Even {
 
         String[] questions = new String[NUMBER_OF_ROUNDS];
 
-        for (int j = 0; j < NUMBER_OF_ROUNDS; j++){    //конвертируем целые числа в строки для правильной работы движка
+        for (int j = 0; j < NUMBER_OF_ROUNDS; j++) {    //конвертируем целые числа в строки для правильной работы движка
             questions[j] = String.valueOf(questionsInt[j]);
         }
 

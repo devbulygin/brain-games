@@ -29,9 +29,9 @@ public class Progression {
 
             int[] elements = new int[progressionLength]; // создаем массив заданной длинн
 
-            for (int k = 0; k < progressionLength; k++) { // заполняем массив в соответсвии с полученными случаными числами
-                elements[k] = startProgression + (k * stepProgression); //вычисляем элемент прогрессии и записываем его в массив
-                if (k == hideElement) {         // если элемент под заданным номером нужно скрыть? то хаменяем его на 2 точки
+            for (int k = 0; k < progressionLength; k++) { // заполняем массив
+                elements[k] = startProgression + (k * stepProgression); //вычисляем элемент  и записываем его в массив
+                if (k == hideElement) { // если элемент под заданным номером нужно скрыть? то хаменяем его на 2 точки
                     elementsString[k] = ".. ";
                 } else {
                     elementsString[k] = String.valueOf(elements[k]) + " "; // переводим из int в string

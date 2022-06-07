@@ -53,10 +53,10 @@ public class Calc {
                 default:
                     System.out.println("Operation '" + operator + "' not found!");
                     break;
-                }
             }
+        }
 
         Engine.run(description, questions, currentAnswers);
 
-        }
     }
+}
