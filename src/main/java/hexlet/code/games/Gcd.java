@@ -7,26 +7,33 @@ import hexlet.code.Utils;
 import java.util.Scanner;
 
 public class Gcd {
-    static final int NUMBER_OF_ROUNDS = 3; // Количество раундов в игре
-    public static void play() {
+
+    public static void playGcd() {
+
+
 //      Правила игры
         String description = "Find the greatest common divisor of given numbers.";
         Scanner q = new Scanner(System.in);
 
-        String[] questions = new String[NUMBER_OF_ROUNDS]; // массив с вопросами
-        int[] currentAnswersInt = new int[NUMBER_OF_ROUNDS]; // массив с верными овтетам int
-        String[] currentAnswers = new String[NUMBER_OF_ROUNDS]; // массив с верными ответами String
+        String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS][2]; // массив с вопросами
 
-        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
+        for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
 //      Генерируем случайные числа
-            int a = Utils.randomNumber();
-            int b = Utils.randomNumber();
+            String a = String.valueOf(Utils.randomNumber());
+            String b = String.valueOf(Utils.randomNumber());
 
 //      Получаем верный ответ с помощью алгортитма Евклида
-            questions[i] = String.valueOf(a) + " " + String.valueOf(b);
-            currentAnswersInt[i] = Utils.euclidsAlgorithm(a, b);
-            currentAnswers[i] = String.valueOf(currentAnswersInt[i]);
+            questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = a + " " + b;
+
+            int x = Integer.parseInt(a);
+            int y = Integer.parseInt(b);
+            while (y != 0) {
+                int tmp = x % y;
+                x = y;
+                y = tmp;
+            }
+            questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = String.valueOf(x); // сохраняем верный ответ в массив
         }
-        Engine.run(description, questions, currentAnswers);
+        Engine.run(description, questionsAndAnswers);
     }
 }

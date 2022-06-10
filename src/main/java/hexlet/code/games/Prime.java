@@ -4,23 +4,41 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
-    static final int NUMBER_OF_ROUNDS = 3; // Количество раундов в игре
-    public static void play() {
+
+    public static void playPrime() {
+
+
 //        Является ли данное число простым?
         String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        String[] questions = new String[NUMBER_OF_ROUNDS]; // массив с вопросами
-        String[] currentAnswers = new String[NUMBER_OF_ROUNDS]; // массив с верными ответами String
+        String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS][2]; // массив с вопросами и ответами
 
-        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
+
+        for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
 
             int number = Utils.randomNumber(); //генерируем рандомное число
-            questions[i] = String.valueOf(number); // сохраняем рандомное число в массив с вопросами
-            currentAnswers[i] = Utils.checkPrime(number); // проверяем рандомное число на простоту
+            questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = String.valueOf(number); // сохраняем рандомное число в массив с вопросами
 
+            int temp;
+            boolean isPrime = true;
+            questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = "";
+
+            for (int j = 2; j * j <= number; j++) {
+                temp = number % j;
+
+                if (temp == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = "yes";
+            } else {
+                questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = "no";
+            }
         }
 
-        Engine.run(description, questions, currentAnswers);
+        Engine.run(description, questionsAndAnswers);
     }
 }
 

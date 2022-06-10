@@ -5,49 +5,48 @@ import hexlet.code.Utils;
 import java.util.Random;
 
 public class Calc {
-    static final int NUMBER_OF_ROUNDS = 3; // Количество раундов в игре
 
-    public static void play() {
-        Random r = new Random();
+
+    public static void playCalc() {
+//        создаем переменные для обозначения вопроса и ответа в думерном массиве
+
 
 //      Описание игры
         String description = "What is the result of the expression?";
 
-        String[] questions = new String[NUMBER_OF_ROUNDS]; // массив с вопросами
-        int[] currentAnswersInt = new int[NUMBER_OF_ROUNDS]; // массив с верными овтетам int
-        String[] currentAnswers = new String[NUMBER_OF_ROUNDS]; // массив с верными ответами String
+        String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS][2]; // массив с вопросами
 
+        char[] operators = {'+', '*', '-'};
 
 //      Заполняем массивы с вопросами и верными ответами
-        for (int i = 0; i < NUMBER_OF_ROUNDS; i++) {
+        for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             int a = Utils.randomNumber();
             int b = Utils.randomNumber();
 
+
+
 //      переменная operator позволит случайно выбирать выражения
-            int operator = r.nextInt(2);
+            char operator = operators[Utils.randomOperator()];
 
 //      случаное значение operator выбирает выражен
             switch (operator) {
 
 //      сложение
-                case 0:
-                    currentAnswersInt[i] = a + b;
-                    questions[i] = String.valueOf(a) + " + " + String.valueOf(b);
-                    currentAnswers[i] = String.valueOf(currentAnswersInt[i]);
+                case '+':
+                    questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = String.valueOf(a) + " + " + String.valueOf(b);
+                    questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = String.valueOf(a + b);
                     break;
 
 //          умножение
-                case 1:
-                    currentAnswersInt[i] = a * b;
-                    questions[i] = String.valueOf(a) + " * " + String.valueOf(b);
-                    currentAnswers[i] = String.valueOf(currentAnswersInt[i]);
+                case '*':
+                    questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = String.valueOf(a) + " * " + String.valueOf(b);
+                    questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = String.valueOf(a * b);
                     break;
 
 //          вычитание
-                case 2:
-                    currentAnswersInt[i] = a - b;
-                    questions[i] = String.valueOf(a) + " - " + String.valueOf(b);
-                    currentAnswers[i] = String.valueOf(currentAnswersInt[i]);
+                case '-':
+                    questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = String.valueOf(a) + " - " + String.valueOf(b);
+                    questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = String.valueOf(a - b);
                     break;
 
                 default:
@@ -56,7 +55,7 @@ public class Calc {
             }
         }
 
-        Engine.run(description, questions, currentAnswers);
+        Engine.run(description, questionsAndAnswers);
 
     }
 }

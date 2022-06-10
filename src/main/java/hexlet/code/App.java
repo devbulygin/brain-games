@@ -1,15 +1,15 @@
 package hexlet.code;
 
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Gcd;
-import hexlet.code.games.Progression;
-import hexlet.code.games.Prime;
-import hexlet.code.games.Even;
+import hexlet.code.games.*;
+
 
 import java.util.Scanner;
 
 public class App {
+    static final int GREET = 0;
+    static final int ONE_GAME = 1;
+    static final int TWO_GAME = 2;
     static final int THREE_GAME = 3;
     static final int FOUR_GAME = 4;
     static final int FIVE_GAME = 5;
@@ -31,26 +31,26 @@ public class App {
 
 //      Выбирем игру
         switch (number) {
-            case 0:
+            case GREET:
                 System.exit(0); // выход
                 break;
-            case 1:
+            case ONE_GAME:
                 Cli.askName(); // спрашиваем имя
                 break;
-            case 2:
-                Even.play(); //четное-нечетное
+            case TWO_GAME:
+                Even.playEven(); //четное-нечетное
                 break;
             case THREE_GAME:
-                Calc.play(); // калькулятор
+                Calc.playCalc(); // калькулятор
                 break;
             case FOUR_GAME:
-                Gcd.play();  //НОД
+                Gcd.playGcd();  //НОД
                 break;
             case FIVE_GAME:
-                Progression.play();  //нахождение элемента прогрессии
+                Progression.playProgression();  //нахождение элемента прогрессии
                 break;
             case SIX_GAME:
-                Prime.play();  //проверка на простое число
+                Prime.playPrime();  //проверка на простое число
                 break;
 
             default:
