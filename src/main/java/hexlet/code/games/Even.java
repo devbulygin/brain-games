@@ -17,9 +17,10 @@ public class Even {
 
 
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            questionsAndCurrentAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = String.valueOf(Utils.randomNumber());      // заполняем массив случайными числами
+            questionsAndCurrentAnswers[i][Engine.QUESTION_NUMBER_ARRAY]
+                    = String.valueOf(Utils.randomNumber());      // заполняем массив случайными числами
 
-            int check = Integer.parseInt(questionsAndCurrentAnswers[i][Engine.QUESTION_NUMBER_ARRAY]) % 2; //проверка на четность
+            int check = Integer.parseInt(questionsAndCurrentAnswers[i][Engine.QUESTION_NUMBER_ARRAY]) % 2;
             if (check == 0) {
                 questionsAndCurrentAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = "yes";
             } else {

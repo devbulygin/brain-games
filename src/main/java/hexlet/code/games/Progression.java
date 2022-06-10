@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Random;
 
 public class Progression {
     static final int RANDOM_MAX_PROGRESSION = 12; //максимальная длинна прогрессии
@@ -17,28 +16,36 @@ public class Progression {
         String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS][2]; // массив с вопросами
 
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            int progressionLength = Utils.randomProgressionLength(RANDOM_MAX_PROGRESSION, RANDOM_MIN_PROGRESSION); // случайный размер массива от 5 до 12
-            int startProgression = Utils.randomNumber(); // первый элемент прогрессии, случайное число от 0 до 99
-            int stepProgression = Utils.stepProgression(RANDOM_MIN_PROGRESSION); // шаг между элементами прогрессии, случайное число от 2 до 5
-            String[] elementsString = new String[progressionLength]; //массив прогрессии String
-            String[] progressionString = {"", "", ""}; // сформулиярованный массив в виде строки и обнуляем его
+//            случайный размер массива от 5 до 12
+            int progressionLength = Utils.randomProgressionLength(RANDOM_MAX_PROGRESSION, RANDOM_MIN_PROGRESSION);
+//            первый элемент прогрессии, случайное число от 0 до 99
+            int startProgression = Utils.randomNumber();
+//            шаг между элементами прогрессии, случайное число от 2 до 5
+            int stepProgression = Utils.stepProgression(RANDOM_MIN_PROGRESSION);
+//            массив прогрессии String
+            String[] elementsString = new String[progressionLength];
+//            сформулиярованный массив в виде строки и обнуляем его
+            String[] progressionString = {"", "", ""};
 
 
-
-            int hideElement = Utils.randomProgressionElementHide(progressionLength); // случайный элемент прогрессии, который будет скрыт
-
-            String[] elements = new String[progressionLength]; // создаем массив заданной длинн
-
-            for (int k = 0; k < progressionLength; k++) { // заполняем массив
-                elements[k] = String.valueOf(startProgression + (k * stepProgression)); //вычисляем элемент  и записываем его в массив
-                if (k == hideElement) { // если элемент под заданным номером нужно скрыть? то хаменяем его на 2 точки
+//            случайный элемент прогрессии, который будет скрыт
+            int hideElement = Utils.randomProgressionElementHide(progressionLength);
+//            создаем массив заданной длинн
+            String[] elements = new String[progressionLength];
+//            заполняем массив
+            for (int k = 0; k < progressionLength; k++) {
+//            вычисляем элемент  и записываем его в массив
+                elements[k] = String.valueOf(startProgression + (k * stepProgression));
+//            если элемент под заданным номером нужно скрыть? то хаменяем его на 2 точки
+                if (k == hideElement) {
                     elementsString[k] = ".. ";
                 } else {
-                    elementsString[k] = String.valueOf(elements[k]) + " "; // переводим из int в string
+//            переводим из int в string
+                    elementsString[k] = String.valueOf(elements[k]) + " ";
                 }
                 progressionString[i] += elementsString[k];
-
-                questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = String.valueOf(elements[hideElement]); //сохраняем верный ответ
+//            сохраняем верный ответ
+                questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = String.valueOf(elements[hideElement]);
 
                 questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = progressionString[i];
             }

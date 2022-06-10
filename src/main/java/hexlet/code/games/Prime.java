@@ -17,7 +17,8 @@ public class Prime {
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
 
             int number = Utils.randomNumber(); //генерируем рандомное число
-            questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = String.valueOf(number); // сохраняем рандомное число в массив с вопросами
+            questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] =
+                    String.valueOf(number); // сохраняем рандомное число в массив с вопросами
 
             int temp;
             boolean isPrime = true;

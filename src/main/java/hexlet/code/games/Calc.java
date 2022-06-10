@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 import hexlet.code.Utils;
-import java.util.Random;
+
 
 public class Calc {
 
@@ -33,20 +33,26 @@ public class Calc {
 
 //      сложение
                 case '+':
-                    questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = String.valueOf(a) + " + " + String.valueOf(b);
-                    questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = String.valueOf(a + b);
+                    questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] =
+                            String.valueOf(a) + " + " + String.valueOf(b);
+                    questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] =
+                            String.valueOf(a + b);
                     break;
 
 //          умножение
                 case '*':
-                    questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = String.valueOf(a) + " * " + String.valueOf(b);
-                    questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = String.valueOf(a * b);
+                    questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] =
+                            String.valueOf(a) + " * " + String.valueOf(b);
+                    questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] =
+                            String.valueOf(a * b);
                     break;
 
 //          вычитание
                 case '-':
-                    questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] = String.valueOf(a) + " - " + String.valueOf(b);
-                    questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = String.valueOf(a - b);
+                    questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] =
+                            String.valueOf(a) + " - " + String.valueOf(b);
+                    questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] =
+                            String.valueOf(a - b);
                     break;
 
                 default:
