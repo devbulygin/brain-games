@@ -21,7 +21,7 @@ public class Progression {
             int progressionLength = PROGRESSION_LENGTH;
 
             int startProgression = Utils.randomNumber(RANDOM_MAX);
-            int stepProgression = Utils.randomNumberInRange(STEP_MAX , STEP_MIN);
+            int stepProgression = Utils.randomNumberInRange(STEP_MAX, STEP_MIN);
             String[] elementsString = new String[progressionLength];
             String[] progressionString = {"", "", ""};
 
