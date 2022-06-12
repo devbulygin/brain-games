@@ -18,7 +18,9 @@ public class Prime {
                     String.valueOf(Utils.randomNumber(RANDOM_MAX));
 
             questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = ""; //обнуляем элемент массива
-            questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = Prime.isPrime(questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY]);
+            questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY]
+                    = Prime.isPrime(questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY]);
+
         }
 
         Engine.run(description, questionsAndAnswers);
@@ -26,7 +28,7 @@ public class Prime {
 
 
 //    провоеряем простое число или нет?
-    public static String isPrime(String a){
+    public static String isPrime(String a) {
         int number = Integer.parseInt(a);
         int temp;
         boolean isPrime = true;

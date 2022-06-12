@@ -6,6 +6,8 @@ import hexlet.code.Utils;
 
 public class Progression {
     static final int RANDOM_MAX = 98; //максимальное случайное число 99, (1+98)
+    static final int STEP_MIN = 2;
+    static final int STEP_MAX = 5;
 
     private static final int PROGRESSION_LENGTH = 7;
 
@@ -19,7 +21,7 @@ public class Progression {
             int progressionLength = PROGRESSION_LENGTH;
 
             int startProgression = Utils.randomNumber(RANDOM_MAX);
-            int stepProgression = Utils.randomNumberInRange(5,2);
+            int stepProgression = Utils.randomNumberInRange(STEP_MAX , STEP_MIN);
             String[] elementsString = new String[progressionLength];
             String[] progressionString = {"", "", ""};
 

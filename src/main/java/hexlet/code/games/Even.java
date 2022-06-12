@@ -20,7 +20,9 @@ public class Even {
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             questionsAndCurrentAnswers[i][Engine.QUESTION_NUMBER_ARRAY]
                     = String.valueOf(Utils.randomNumber(RANDOM_MAX));      // заполняем массив случайными числами
-            questionsAndCurrentAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = Even.isEven(Integer.parseInt(questionsAndCurrentAnswers[i][Engine.QUESTION_NUMBER_ARRAY]));
+            questionsAndCurrentAnswers[i][Engine.ANSWER_NUMBER_ARRAY]
+                    = Even.isEven(Integer.parseInt(questionsAndCurrentAnswers[i][Engine.QUESTION_NUMBER_ARRAY]));
+
 
         }
 

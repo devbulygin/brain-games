@@ -4,7 +4,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Scanner;
 
 public class Gcd {
     static final int RANDOM_MAX = 98; //максимальное случайное число 99, (1+98)
