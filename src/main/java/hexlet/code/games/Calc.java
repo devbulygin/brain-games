@@ -6,32 +6,29 @@ import hexlet.code.Utils;
 
 public class Calc {
 
+    private static final int MIN = 1;
+    private static final int MAX = 99;
+
 
     public static void playCalc() {
-//        создаем переменные для обозначения вопроса и ответа в думерном массиве
-
-
-//      Описание игры
         String description = "What is the result of the expression?";
 
         String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS][2]; // массив с вопросами
 
         char[] operators = {'+', '*', '-'};
 
-//      Заполняем массивы с вопросами и верными ответами
+
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
-            int a = Utils.randomNumber();
-            int b = Utils.randomNumber();
+            int a = Utils.randomNumberInRange(MAX, MIN);
+            int b = Utils.randomNumberInRange(MAX, MIN);
 
 
 
-//      переменная operator позволит случайно выбирать выражения
-            char operator = operators[Utils.randomOperator()];
+            char operator = operators[Utils.randomNumberToSpecificValue(operators.length)];
 
-//      случаное значение operator выбирает выражен
+//      случаное значение operator выбирает выражение
             switch (operator) {
 
-//      сложение
                 case '+':
                     questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] =
                             String.valueOf(a) + " + " + String.valueOf(b);
@@ -39,7 +36,6 @@ public class Calc {
                             String.valueOf(a + b);
                     break;
 
-//          умножение
                 case '*':
                     questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] =
                             String.valueOf(a) + " * " + String.valueOf(b);
@@ -47,7 +43,6 @@ public class Calc {
                             String.valueOf(a * b);
                     break;
 
-//          вычитание
                 case '-':
                     questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] =
                             String.valueOf(a) + " - " + String.valueOf(b);

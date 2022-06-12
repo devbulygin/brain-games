@@ -3,6 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
+
     public static final int NUMBER_OF_ROUNDS = 3; // Количество раундов в игре
     public static final int QUESTION_NUMBER_ARRAY = 0; //Обозначение вопроса в двумерном массие
     public static final int ANSWER_NUMBER_ARRAY = 1; // Обозначение ответа в двумерном массие
@@ -31,7 +32,7 @@ public class Engine {
                 System.out.println("'" + userAnswer + "'" + " is wrong answer ;(. "
                         + "Correct answer was " + "'" + questionsAndAnswers[i][ANSWER_NUMBER_ARRAY] + "'");
                 System.out.println("Let's try again, " + userName + "!");
-                System.exit(0);
+                return;
             }
         }
 //        Поздравления
