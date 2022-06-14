@@ -17,9 +17,9 @@ public class Even {
                     = String.valueOf(Utils.randomNumber(RANDOM_MAX));
 
             questionsAndCurrentAnswers[i][Engine.ANSWER_NUMBER_ARRAY]
-                    = (Even.isEven(Integer.parseInt(questionsAndCurrentAnswers[i][Engine.QUESTION_NUMBER_ARRAY]))) ?
-                    "yes" :
-                    "no";
+                    = (Even.isEven(Integer.parseInt(questionsAndCurrentAnswers[i][Engine.QUESTION_NUMBER_ARRAY])))
+                    ? "yes"
+                    : "no";
         }
 
         Engine.run(description, questionsAndCurrentAnswers);
