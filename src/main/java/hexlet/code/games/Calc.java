@@ -8,21 +8,18 @@ public class Calc {
 
     private static final int MIN = 1;
     private static final int MAX = 99;
+    static String description = "What is the result of the expression?";
+
+    static char[] operators = {'+', '*', '-'};
 
 
     public static void playCalc() {
-        String description = "What is the result of the expression?";
 
         String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS][2]; // массив с вопросами
-
-        char[] operators = {'+', '*', '-'};
-
 
         for (int i = 0; i < Engine.NUMBER_OF_ROUNDS; i++) {
             int a = Utils.randomNumberInRange(MAX, MIN);
             int b = Utils.randomNumberInRange(MAX, MIN);
-
-
 
             char operator = operators[Utils.randomNumberToSpecificValue(operators.length)];
 
@@ -51,8 +48,7 @@ public class Calc {
                     break;
 
                 default:
-                    System.out.println("Operation '" + operator + "' not found!");
-                    break;
+                    throw new Error("Operation '" + operator + "' not found!");
             }
         }
 

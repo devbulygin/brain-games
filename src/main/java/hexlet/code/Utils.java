@@ -4,9 +4,6 @@ import java.util.Random;
 
 public class Utils {
 
-
-
-    //   генерируем случайное число от 1 до 99
     public static int randomNumber(int max) {
         Random r = new Random();
         int randomNumber = r.nextInt(max) + 1;
