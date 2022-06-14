@@ -5,6 +5,7 @@ import hexlet.code.Utils;
 
 public class Prime {
     static final int RANDOM_MAX = 98; //максимальное случайное число 99, (1+98)
+
     private static String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void playPrime() {
@@ -31,6 +32,10 @@ public class Prime {
         int number = Integer.parseInt(a);
         int temp;
         boolean isPrime = true;
+
+        if (a.equalsIgnoreCase("1")) {
+            return  isPrime;
+        }
 
         for (int j = 2; j * j <= number; j++) {
             temp = number % j;
