@@ -10,7 +10,7 @@ public class Progression {
     static final int STEP_MAX = 5;
 
     private static final int PROGRESSION_LENGTH = 7;
-    static String description = "What number is missing in the progression?";
+    private static String description = "What number is missing in the progression?";
 
 
     public static void playProgression() {
@@ -28,7 +28,7 @@ public class Progression {
             String[] elements = new String[progressionLength];
 
             for (int k = 0; k < progressionLength; k++) {
-                elements[k]= String.valueOf(startProgression + (k * stepProgression));
+                elements[k] = String.valueOf(startProgression + (k * stepProgression));
 
                 if (k == hideElement) {
                     questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = elements[k];
@@ -36,7 +36,8 @@ public class Progression {
                     continue;
                 }
 
-                questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] += String.valueOf(startProgression + (k * stepProgression)) + " ";
+                questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY]
+                        += String.valueOf(startProgression + (k * stepProgression)) + " ";
             }
 
         }

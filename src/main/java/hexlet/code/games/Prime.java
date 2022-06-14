@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Prime {
     static final int RANDOM_MAX = 98; //максимальное случайное число 99, (1+98)
-    static String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    private static String description = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
     public static void playPrime() {
 

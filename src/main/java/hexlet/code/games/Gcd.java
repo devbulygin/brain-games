@@ -7,7 +7,7 @@ import hexlet.code.Utils;
 
 public class Gcd {
     static final int RANDOM_MAX = 98; //максимальное случайное число 99, (1+98)
-    static String description = "Find the greatest common divisor of given numbers.";
+    private static String description = "Find the greatest common divisor of given numbers.";
     public static void playGcd() {
 
         String[][] questionsAndAnswers = new String[Engine.NUMBER_OF_ROUNDS][2];

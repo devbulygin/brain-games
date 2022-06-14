@@ -8,9 +8,9 @@ public class Calc {
 
     private static final int MIN = 1;
     private static final int MAX = 99;
-    static String description = "What is the result of the expression?";
+    private static String description = "What is the result of the expression?";
 
-    static char[] operators = {'+', '*', '-'};
+    private static char[] operators = {'+', '*', '-'};
 
 
     public static void playCalc() {
