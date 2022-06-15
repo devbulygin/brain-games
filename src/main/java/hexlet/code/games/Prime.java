@@ -20,7 +20,9 @@ public class Prime {
             questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = ""; //обнуляем элемент массива
 
             questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY]
-                    = (Prime.isPrime(Integer.parseInt(questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY]))) ? "yes" : "no";
+                    = (Prime.isPrime(Integer.parseInt(questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY])))
+                    ? "yes"
+                    : "no";
         }
 
         Engine.run(DESCRIPTION, questionsAndAnswers);
