@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 
 public class Even {
     static final int RANDOM_MAX = 98; //максимальное случайное число 99, (1+98)
-    private static String description = "Answer 'yes' if number even otherwise answer 'no'";
+    private static final String DESCRIPTION = "Answer 'yes' if number even otherwise answer 'no'";
 
     public static void playEven() {
 
@@ -22,7 +22,7 @@ public class Even {
                     : "no";
         }
 
-        Engine.run(description, questionsAndCurrentAnswers);
+        Engine.run(DESCRIPTION, questionsAndCurrentAnswers);
     }
     private static boolean isEven(int number) {
         int check = number % 2;

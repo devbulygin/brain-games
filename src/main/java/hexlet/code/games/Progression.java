@@ -10,7 +10,7 @@ public class Progression {
     static final int STEP_MAX = 5;
 
     private static final int PROGRESSION_LENGTH = 7;
-    private static String description = "What number is missing in the progression?";
+    private static final String DESCRIPTION = "What number is missing in the progression?";
 
 
     public static void playProgression() {
@@ -24,13 +24,13 @@ public class Progression {
             int stepProgression = Utils.randomNumberInRange(STEP_MAX, STEP_MIN);
 
 //            случайный элемент прогрессии, который будет скрыт (длинна массива -1)
-            int hideElement = Utils.randomNumberToSpecificValue(progressionLength - 1);
+            int hideIndexOfArray = Utils.randomNumberToSpecificValue(progressionLength - 1);
             String[] elements = new String[progressionLength];
 
             for (int k = 0; k < progressionLength; k++) {
                 elements[k] = String.valueOf(startProgression + (k * stepProgression));
 
-                if (k == hideElement) {
+                if (k == hideIndexOfArray) {
                     questionsAndAnswers[i][Engine.ANSWER_NUMBER_ARRAY] = elements[k];
                     questionsAndAnswers[i][Engine.QUESTION_NUMBER_ARRAY] += ".. ";
                     continue;
@@ -41,6 +41,6 @@ public class Progression {
             }
 
         }
-        Engine.run(description, questionsAndAnswers);
+        Engine.run(DESCRIPTION, questionsAndAnswers);
     }
 }
