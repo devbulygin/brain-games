@@ -41,8 +41,8 @@ public class Prime {
         for (int j = 2; j * j <= number; j++) {
             temp = number % j;
             if (temp == 0) {
-                isPrime = false;
-                break;
+                return false;
+
             }
         }
 
